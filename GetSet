@@ -1,0 +1,16 @@
+pragma solidity 0.5.12;
+
+contract HelloWorld{
+    string public message = "Hello World";
+    
+    // state variable, get, read only
+    function getMessage() public view returns(string memory){
+        return message;
+    }
+    
+    // edit content, set, costs gas 
+    function setMessage(string memory NewMessage) public{
+        message = NewMessage;
+    }
+
+}
